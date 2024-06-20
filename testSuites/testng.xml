@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <suite parallel = "tests" name="Suite"> -->
+<!--<suite parallel = "tests" name="Suite">-->
+ <!-- <suite parallel = "methods" name="Suite">  -->
+  <suite  name="Suite"> 
+ <listeners>
+ 	<listener class-name="TestFramework.testComponents.Listeners"/>
+ </listeners>
+<!-- thread-count means only specified amount of methods is allowed to run parallely in a class or test at a time -->
+  <test thread-count="1" name="Submit Order Test">
+    <classes>
+     
+      <class name="TestFramework.tests.SubmitOrderTest"/>
+     
+    </classes>
+  </test> <!-- Test -->
+  
+   <test thread-count="1" name="Error Validations Test">
+    <classes>
+      <class name="TestFramework.tests.ErrorValidationsTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
